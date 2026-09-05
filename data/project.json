@@ -1,0 +1,1475 @@
+{
+ "meta": {
+  "savedAt": "2026-09-04T18:00:00Z",
+  "note": "initial shared version: scene legs halfway, blacks 47/45/45/42, printed drops"
+ },
+ "state": {
+  "version": 2,
+  "venue": {
+   "name": "Pat Walker Auditorium",
+   "prosW": 58,
+   "prosH": 24,
+   "grid": 50.625,
+   "battenLen": 68,
+   "pkgTop": 26,
+   "cycFt": 29.25,
+   "humpFt": -1.25,
+   "apronFt": 20,
+   "seatFrontFt": 36,
+   "seatEyeFt": 2.0,
+   "seatSideFt": 20,
+   "maskLineFt": 21,
+   "tormFt": 12,
+   "tormD": 1
+  },
+  "production": {
+   "name": "Nutcracker 2026 \u2014 Tight Shared Masking",
+   "cues": [
+    {
+     "id": "cue-party",
+     "name": "Party",
+     "scene": "Party",
+     "duration": 35,
+     "lines": {
+      "1": {
+       "fly": 50.625,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "2": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "3": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "4": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "5": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "6": {
+       "fly": 28.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "7": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "8": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "9": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "10": {
+       "fly": 25.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "11": {
+       "fly": 30,
+       "visible": true,
+       "x": 0,
+       "rot": 0,
+       "open": 100
+      },
+      "12": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "13": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "14": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "15": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "16": {
+       "fly": 26.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "17": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "18": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "19": {
+       "fly": 29,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "20": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "21": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "22": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "23": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "24": {
+       "fly": 20.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "25": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      }
+     },
+     "deck": {}
+    },
+    {
+     "id": "cue-battle",
+     "name": "Battle",
+     "scene": "Battle",
+     "duration": 35,
+     "lines": {
+      "1": {
+       "fly": 50.625,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "2": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "3": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "4": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "5": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "6": {
+       "fly": 28.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "7": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "8": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "9": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "10": {
+       "fly": 25.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "11": {
+       "fly": 30,
+       "visible": true,
+       "x": 0,
+       "rot": 0,
+       "open": 100
+      },
+      "12": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "13": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "14": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "15": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "16": {
+       "fly": 26.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "17": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "18": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "19": {
+       "fly": 29,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "20": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "21": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "22": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "23": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "24": {
+       "fly": 40.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "25": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      }
+     },
+     "deck": {}
+    },
+    {
+     "id": "cue-snow-adagio",
+     "name": "Snow Adagio",
+     "scene": "Snow",
+     "duration": 35,
+     "lines": {
+      "1": {
+       "fly": 50.625,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "2": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "3": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "4": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "5": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "6": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "7": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "8": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "9": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "10": {
+       "fly": 25.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "11": {
+       "fly": 30,
+       "visible": true,
+       "x": 0,
+       "rot": 0,
+       "open": 0
+      },
+      "12": {
+       "fly": 31.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "13": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "14": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "15": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "16": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "17": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "18": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "19": {
+       "fly": 33.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "20": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "21": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "22": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "23": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "24": {
+       "fly": 40,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "25": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      }
+     },
+     "deck": {}
+    },
+    {
+     "id": "cue-snow",
+     "name": "Snow",
+     "scene": "Snow",
+     "duration": 35,
+     "lines": {
+      "1": {
+       "fly": 50.625,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "2": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "3": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "4": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "5": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "6": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "7": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "8": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "9": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "10": {
+       "fly": 25.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "11": {
+       "fly": 30,
+       "visible": true,
+       "x": 0,
+       "rot": 0,
+       "open": 100
+      },
+      "12": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "13": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "14": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "15": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "16": {
+       "fly": 26.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "17": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "18": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "19": {
+       "fly": 33.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "20": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "21": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "22": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "23": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "24": {
+       "fly": 40.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "25": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      }
+     },
+     "deck": {}
+    },
+    {
+     "id": "cue-snowfall",
+     "name": "Snowfall",
+     "scene": "Snow",
+     "duration": 35,
+     "lines": {
+      "1": {
+       "fly": 50.625,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "2": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "3": {
+       "fly": 31,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "4": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "5": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "6": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "7": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "8": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "9": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "10": {
+       "fly": 25.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "11": {
+       "fly": 30,
+       "visible": true,
+       "x": 0,
+       "rot": 0,
+       "open": 100
+      },
+      "12": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "13": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "14": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "15": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "16": {
+       "fly": 26.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "17": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "18": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "19": {
+       "fly": 33.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "20": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "21": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "22": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "23": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "24": {
+       "fly": 40.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "25": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      }
+     },
+     "deck": {}
+    },
+    {
+     "id": "cue-sugar",
+     "name": "Sugar",
+     "scene": "Sugar",
+     "duration": 35,
+     "lines": {
+      "1": {
+       "fly": 50.625,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "2": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "3": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "4": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "5": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "6": {
+       "fly": 28.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "7": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "8": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "9": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "10": {
+       "fly": 25.5,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "11": {
+       "fly": 30,
+       "visible": true,
+       "x": 0,
+       "rot": 0,
+       "open": 100
+      },
+      "12": {
+       "fly": 28,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "13": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "14": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "15": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "16": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "17": {
+       "fly": 25,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "18": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "19": {
+       "fly": 29,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "20": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "21": {
+       "fly": 25.0,
+       "visible": true,
+       "x": 0,
+       "rot": 0
+      },
+      "22": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "23": {
+       "fly": 50.625,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "24": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      },
+      "25": {
+       "fly": 20.0,
+       "visible": false,
+       "x": 0,
+       "rot": 0
+      }
+     },
+     "deck": {}
+    }
+   ]
+  },
+  "assets": [
+   {
+    "id": "grand-border",
+    "name": "Grand Border",
+    "type": "border",
+    "w": 56,
+    "h": 7,
+    "d": 0.25,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "electric-1",
+    "name": "Electric #1",
+    "type": "electric",
+    "w": 56,
+    "h": 1,
+    "d": 1,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "legs-1",
+    "name": "Legs #1 \u2014 47 ft opening",
+    "type": "legs",
+    "w": 47,
+    "h": 25,
+    "d": 0.5,
+    "autoMask": false,
+    "source": null,
+    "data": null,
+    "credit": "Height set to 25 ft 2026-09-04: David confirms the house legs fly fully out of sight (model had 28 ft placeholder); confirm the real height."
+   },
+   {
+    "id": "ice-pros",
+    "name": "Snow Portal \u2014 curved canopy + tree legs, 40 ft opening (Snow set)",
+    "type": "image",
+    "w": 62,
+    "h": 25,
+    "d": 0.15,
+    "autoMask": false,
+    "source": "generated-portal",
+    "layer": "ice",
+    "credit": "Cut from the snow backdrop's own canopy and trees: 62 \u00d7 25 ft, 40 ft opening, border edge arches from 16 ft at the legs to 20 ft at centre (the backdrop top)",
+    "opening": 40,
+    "canopyFt": 20
+   },
+   {
+    "id": "canopy-1",
+    "name": "Border #1",
+    "type": "border",
+    "w": 56,
+    "h": 7,
+    "d": 0.25,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "legs-2",
+    "name": "Legs #2 \u2014 45 ft opening",
+    "type": "legs",
+    "w": 45,
+    "h": 25,
+    "d": 0.5,
+    "autoMask": false,
+    "source": null,
+    "data": null,
+    "credit": "Height set to 25 ft 2026-09-04: David confirms the house legs fly fully out of sight (model had 28 ft placeholder); confirm the real height."
+   },
+   {
+    "id": "electric-2",
+    "name": "Electric #2",
+    "type": "electric",
+    "w": 56,
+    "h": 1,
+    "d": 1,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "traveler-1",
+    "name": "Traveler #1",
+    "type": "traveler",
+    "w": 56,
+    "h": 30,
+    "d": 0.5,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "teaser-2",
+    "name": "Border #2",
+    "type": "border",
+    "w": 56,
+    "h": 7,
+    "d": 0.25,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "canopy-2",
+    "name": "Spare Border \u2014 unassigned",
+    "type": "border",
+    "w": 56,
+    "h": 7,
+    "d": 0.25,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "legs-3",
+    "name": "Legs #3 \u2014 45 ft opening",
+    "type": "legs",
+    "w": 45,
+    "h": 25,
+    "d": 0.5,
+    "autoMask": false,
+    "source": null,
+    "data": null,
+    "credit": "Height set to 25 ft 2026-09-04: David confirms the house legs fly fully out of sight (model had 28 ft placeholder); confirm the real height."
+   },
+   {
+    "id": "legs-4",
+    "name": "Legs #4 \u2014 42 ft opening",
+    "type": "legs",
+    "w": 42,
+    "h": 25,
+    "d": 0.5,
+    "autoMask": false,
+    "source": null,
+    "data": null,
+    "credit": "Height set to 25 ft 2026-09-04: David confirms the house legs fly fully out of sight (model had 28 ft placeholder); confirm the real height."
+   },
+   {
+    "id": "electric-3",
+    "name": "Electric #3",
+    "type": "electric",
+    "w": 56,
+    "h": 1,
+    "d": 1,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "snow-backdrop",
+    "name": "Snow Backdrop \u2014 moonlit forest (Kuindzhi, c. 1900)",
+    "type": "image",
+    "w": 40,
+    "h": 20,
+    "d": 0.15,
+    "autoMask": true,
+    "source": "wikimedia-commons-pd",
+    "credit": "Arkhip Kuindzhi, \"Patches of Moonlight in the Forest. Winter\" (1898\u20131908), public domain via Wikimedia Commons; sides extended by mirroring"
+   },
+   {
+    "id": "teaser-3",
+    "name": "Border #3 / Upstage",
+    "type": "border",
+    "w": 56,
+    "h": 8,
+    "d": 0.25,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "sugar-drop",
+    "name": "Sugar Backdrop \u2014 rococo idyll (Watteau, Cythera, 1717)",
+    "type": "image",
+    "w": 40,
+    "h": 20,
+    "d": 0.15,
+    "autoMask": true,
+    "source": "wikimedia-commons-pd",
+    "credit": "Antoine Watteau, \"Pilgrimage to Cythera\" (1717), public domain via Wikimedia Commons; sides extended by mirroring"
+   },
+   {
+    "id": "electric-4",
+    "name": "Electric #4",
+    "type": "electric",
+    "w": 56,
+    "h": 1,
+    "d": 1,
+    "autoMask": false,
+    "source": null,
+    "data": null
+   },
+   {
+    "id": "tree",
+    "name": "TREE",
+    "type": "tree",
+    "w": 24,
+    "h": 28,
+    "d": 10,
+    "autoMask": false,
+    "source": null,
+    "data": null,
+    "wire": 9.0,
+    "credit": "Telescoping hoop tree, 28 ft fully open, 24 ft base diameter. Its pipe is a normal batten; three fixed wires run from the pipe straight to the top hoop. Wire length derived: tree pipe starts level with the backdrop pipe (20 ft) with the collapsed tree top at 11 ft \u2192 9 ft."
+   },
+   {
+    "id": "party-room",
+    "name": "Party Backdrop \u2014 1890s salon (Johansen, \"Glade jul\", 1891)",
+    "type": "image",
+    "w": 40,
+    "h": 20,
+    "d": 0.15,
+    "autoMask": true,
+    "source": "wikimedia-commons-pd",
+    "credit": "Viggo Johansen, \"Glade jul\" (1891), public domain via Wikimedia Commons; sides extended by mirroring"
+   },
+   {
+    "id": "ly_party_lit",
+    "name": "Parlor 2025 (static, tree lit)",
+    "type": "image",
+    "w": 50,
+    "h": 25,
+    "d": 0.15,
+    "autoMask": true,
+    "source": "nutcracker-2025-qlab",
+    "credit": "Nutcracker 2025 projected backdrop from the QLab workspace (~/Downloads/Nutcracker25Draftimages/Nutcracker25Act1Done/Nutcrackeract1Workingsnow/video/4.jpg)"
+   },
+   {
+    "id": "ly_snow",
+    "name": "Snow Forest 2025 (DALL\u00b7E, 1280 px source)",
+    "type": "image",
+    "w": 50,
+    "h": 25,
+    "d": 0.15,
+    "autoMask": true,
+    "source": "nutcracker-2025-qlab",
+    "credit": "Nutcracker 2025 projected backdrop from the QLab workspace (~/Downloads/Nutcracker25Draftimages/Nutcracker25Act1Done/Nutcrackeract1Workingsnow/video/DALL\u00b7E \u2026 Large.png)"
+   },
+   {
+    "id": "ly_sugar",
+    "name": "Land of Sweets 2025 \u2014 Sugar Land",
+    "type": "image",
+    "w": 50,
+    "h": 25,
+    "d": 0.15,
+    "autoMask": true,
+    "source": "nutcracker-2025-qlab",
+    "credit": "Nutcracker 2025 projected backdrop from the QLab workspace (~/Downloads/Nutcracker25Draftimages/Nutcracker25Act1Done/Nutcrackeract1Workingsnow/video/Sugar Land.jpg)"
+   },
+   {
+    "id": "snow-cradle",
+    "name": "Snow Cradle \u2014 40 ft trough",
+    "type": "cradle",
+    "w": 40,
+    "h": 1.5,
+    "d": 0.7,
+    "partner": 2,
+    "autoMask": false,
+    "source": null,
+    "credit": "Canvas snow trough hung between this pipe (moving) and the partner pipe (static). Raise this pipe about 3 ft above the partner to tip it.",
+    "data": null
+   },
+   {
+    "id": "parlor-portal",
+    "name": "Parlor Portal \u2014 cornice canopy + pilaster legs, 40 ft opening (Party set)",
+    "type": "image",
+    "w": 62,
+    "h": 25,
+    "d": 0.15,
+    "opening": 40,
+    "autoMask": false,
+    "source": "generated-set",
+    "credit": "Cut from the parlor drop's own cornice and pilasters: 62 \u00d7 25 ft, 40 ft opening, canopy edge arches 16 \u2192 20 ft",
+    "canopyFt": 20
+   },
+   {
+    "id": "sugar-portal",
+    "name": "Sugar Portal \u2014 candy canopy + peppermint legs, 40 ft opening (Sugar set)",
+    "type": "image",
+    "w": 62,
+    "h": 25,
+    "d": 0.15,
+    "opening": 40,
+    "autoMask": false,
+    "source": "generated-set",
+    "credit": "Generated candy-stripe canopy and peppermint column legs in the show palette: 62 \u00d7 25 ft, 40 ft opening, canopy edge arches 16 \u2192 20 ft",
+    "canopyFt": 20
+   },
+   {
+    "id": "snow-legs",
+    "name": "Snow Legs \u2014 frosted trees, 38 ft opening (Snow set)",
+    "type": "image",
+    "w": 62,
+    "h": 25,
+    "d": 0.15,
+    "opening": 38,
+    "autoMask": false,
+    "source": "generated-set",
+    "credit": "Cut from the snow backdrop's outer trees: two 12 ft panels on one pipe, 38 ft opening, 25 ft tall"
+   },
+   {
+    "id": "parlor-legs",
+    "name": "Parlor Legs \u2014 pilasters, 38 ft opening (Party set)",
+    "type": "image",
+    "w": 62,
+    "h": 25,
+    "d": 0.15,
+    "opening": 38,
+    "autoMask": false,
+    "source": "generated-set",
+    "credit": "Cut from the parlor drop's pilasters: two 12 ft panels on one pipe, 38 ft opening, 25 ft tall"
+   },
+   {
+    "id": "sugar-legs",
+    "name": "Sugar Legs \u2014 peppermint columns, 38 ft opening (Sugar set)",
+    "type": "image",
+    "w": 62,
+    "h": 25,
+    "d": 0.15,
+    "opening": 38,
+    "autoMask": false,
+    "source": "generated-set",
+    "credit": "Generated peppermint columns: two 12 ft panels on one pipe, 38 ft opening, 25 ft tall"
+   }
+  ],
+  "linesets": [
+   {
+    "n": 1,
+    "d": 3,
+    "assetId": null,
+    "label": ""
+   },
+   {
+    "n": 2,
+    "d": 16,
+    "assetId": "grand-border",
+    "label": "Grand Border"
+   },
+   {
+    "n": 3,
+    "d": 24,
+    "assetId": "snow-cradle",
+    "label": "Snow Cradle \u2014 40 ft trough"
+   },
+   {
+    "n": 4,
+    "d": 40,
+    "assetId": "electric-1",
+    "label": "Electric #1"
+   },
+   {
+    "n": 5,
+    "d": 64,
+    "assetId": "legs-1",
+    "label": "Legs #1 \u2014 47 ft opening"
+   },
+   {
+    "n": 6,
+    "d": 72,
+    "assetId": "ice-pros",
+    "label": "Snow Portal \u2014 curved canopy + tree legs, 40 ft opening (Snow set)"
+   },
+   {
+    "n": 7,
+    "d": 80,
+    "assetId": "canopy-1",
+    "label": "Border #1"
+   },
+   {
+    "n": 8,
+    "d": 96,
+    "assetId": "legs-3",
+    "label": "Legs #3 \u2014 45 ft opening"
+   },
+   {
+    "n": 9,
+    "d": 104,
+    "assetId": "legs-2",
+    "label": "Legs #2 \u2014 45 ft opening"
+   },
+   {
+    "n": 10,
+    "d": 120,
+    "assetId": "electric-2",
+    "label": "Electric #2"
+   },
+   {
+    "n": 11,
+    "d": 136,
+    "assetId": "traveler-1",
+    "label": "Traveler #1"
+   },
+   {
+    "n": 12,
+    "d": 160,
+    "assetId": "teaser-2",
+    "label": "Border #2"
+   },
+   {
+    "n": 13,
+    "d": 184,
+    "assetId": "sugar-portal",
+    "label": "Sugar Portal \u2014 candy canopy + peppermint legs, 40 ft opening (Sugar set)"
+   },
+   {
+    "n": 14,
+    "d": 192,
+    "assetId": "snow-legs",
+    "label": "Snow Legs \u2014 frosted trees, 38 ft opening (Snow set)"
+   },
+   {
+    "n": 15,
+    "d": 200,
+    "assetId": "legs-4",
+    "label": "Legs #4 \u2014 42 ft opening"
+   },
+   {
+    "n": 16,
+    "d": 224,
+    "assetId": "electric-3",
+    "label": "Electric #3"
+   },
+   {
+    "n": 17,
+    "d": 240,
+    "assetId": "sugar-legs",
+    "label": "Sugar Legs \u2014 peppermint columns, 38 ft opening (Sugar set)"
+   },
+   {
+    "n": 18,
+    "d": 264,
+    "assetId": "ly_snow",
+    "label": "Snow Forest 2025 (DALL\u00b7E, 1280 px source)"
+   },
+   {
+    "n": 19,
+    "d": 280,
+    "assetId": "teaser-3",
+    "label": "Border #3 / Upstage"
+   },
+   {
+    "n": 20,
+    "d": 304,
+    "assetId": "ly_sugar",
+    "label": "Land of Sweets 2025 \u2014 Sugar Land"
+   },
+   {
+    "n": 21,
+    "d": 320,
+    "assetId": "electric-4",
+    "label": "Electric #4"
+   },
+   {
+    "n": 22,
+    "d": 344,
+    "assetId": "parlor-portal",
+    "label": "Parlor Portal \u2014 cornice canopy + pilaster legs, 40 ft opening (Party set)"
+   },
+   {
+    "n": 23,
+    "d": 352,
+    "assetId": "parlor-legs",
+    "label": "Parlor Legs \u2014 pilasters, 38 ft opening (Party set)"
+   },
+   {
+    "n": 24,
+    "d": 384,
+    "assetId": "tree",
+    "label": "TREE"
+   },
+   {
+    "n": 25,
+    "d": 400,
+    "assetId": "ly_party_lit",
+    "label": "Parlor 2025 (static, tree lit)"
+   }
+  ],
+  "deckItems": [],
+  "ui": {
+   "cueIndex": 0
+  }
+ }
+}

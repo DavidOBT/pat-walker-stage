@@ -1,0 +1,391 @@
+<meta charset="utf-8">
+<title>The Moving Room</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Source+Sans+3:ital,wght@0,400..700;1,400..600&display=swap">
+<style>
+:root{
+  --ground:#FBF3E4; --panel:#F4E4CE; --panel-2:#EFD9C0;
+  --ink:#3A1250; --ink-soft:#6B4A80; --ink-faint:#9C86AC;
+  --rule:rgba(58,18,80,.16); --rule-strong:rgba(58,18,80,.38);
+  --pink:#E8629C; --pink-soft:#F2B4CC; --rasp:#B4256B; --gold:#D9A441; --gold-soft:#F3D9A6; --blue:#7FA6C9; --blue-soft:#C9DCEC; --snow:#DCE8F4;
+  --cut:#B4256B;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#22102F; --panel:#2F1741; --panel-2:#3A1F4F;
+    --ink:#F5E8D6; --ink-soft:#CDB8DA; --ink-faint:#9F8AB0;
+    --rule:rgba(245,232,214,.16); --rule-strong:rgba(245,232,214,.42);
+    --pink:#F07AB0; --pink-soft:#7A3A5C; --rasp:#E05A94; --gold:#F0B85A; --gold-soft:#6E5225; --blue:#8FB6D8; --blue-soft:#3C5670; --snow:#3B4E63;
+    --cut:#FF8AC0;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#22102F; --panel:#2F1741; --panel-2:#3A1F4F;
+  --ink:#F5E8D6; --ink-soft:#CDB8DA; --ink-faint:#9F8AB0;
+  --rule:rgba(245,232,214,.16); --rule-strong:rgba(245,232,214,.42);
+  --pink:#F07AB0; --pink-soft:#7A3A5C; --rasp:#E05A94; --gold:#F0B85A; --gold-soft:#6E5225; --blue:#8FB6D8; --blue-soft:#3C5670; --snow:#3B4E63;
+  --cut:#FF8AC0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Source Sans 3","Source Sans Pro",Seravek,"Gill Sans",Calibri,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.page{max-width:1080px;margin:0 auto;padding:40px 28px 96px}
+h1,h2,h3{font-family:Fraunces,"Cormorant Garamond",Georgia,"Times New Roman",serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-weight:400;text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(44px,7vw,84px);line-height:.98;letter-spacing:-.01em;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+h2{font-size:34px;line-height:1.1;margin:0 0 6px}
+h3{font-size:22px;line-height:1.2;margin:22px 0 6px;font-style:italic}
+p{margin:0 0 14px;max-width:68ch}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rasp);font-weight:600;margin-bottom:14px}
+.dek{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 60,"WONK" 0;font-size:24px;line-height:1.3;color:var(--ink-soft);max-width:34ch;margin:22px 0 0;font-style:italic}
+.mast{padding-bottom:34px;border-bottom:1px solid var(--rule-strong);margin-bottom:44px;position:relative}
+.swirl{position:absolute;right:-10px;top:-12px;width:min(300px,34vw);height:auto;opacity:.9;pointer-events:none}
+section{margin:0 0 56px}
+.secno{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-bottom:6px}
+.lede{font-size:19px;max-width:66ch}
+a{color:var(--rasp)}
+strong{font-weight:600}
+em{font-style:italic}
+.verdict{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule-strong);margin:22px 0 26px}
+.verdict>div{padding:20px 22px}
+.verdict>div+div{border-left:1px solid var(--rule-strong)}
+.verdict h3{margin:0 0 10px;font-style:normal;font-size:20px}
+.big{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 0;font-size:40px;line-height:1;margin:6px 0 4px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.big small{font-family:"Source Sans 3",sans-serif;font-size:14px;color:var(--ink-soft);letter-spacing:.04em;display:block;margin-top:6px}
+.note{font-size:14px;color:var(--ink-soft);margin:0}
+.callout{background:var(--panel);border-left:4px solid var(--gold);padding:16px 20px;margin:20px 0;max-width:72ch}
+.callout p:last-child{margin:0}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:14px 0 8px}
+th,td{text-align:left;vertical-align:top;padding:9px 16px 9px 0;border-bottom:1px solid var(--rule)}
+th:last-child,td:last-child{padding-right:0}
+th{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;border-bottom:1px solid var(--rule-strong)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl{overflow-x:auto}
+.scenes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0}
+.scene{padding:18px 18px 16px;background:var(--panel);border-top:3px solid var(--pink)}
+.scene.snow{border-top-color:var(--blue)}
+.scene.sweets{border-top-color:var(--gold)}
+.scene h3{margin:0 0 6px;font-style:normal;font-size:24px}
+.scene .mat{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:600;margin-bottom:10px}
+.scene p{font-size:15px;margin:0 0 8px}
+.chips{display:flex;gap:6px;margin:10px 0 2px}
+.chip{width:34px;height:22px;border-radius:2px;border:1px solid rgba(0,0,0,.12)}
+.rules{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid var(--rule-strong);margin-top:18px}
+.rule{display:grid;grid-template-columns:200px 1fr;gap:18px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.rule .k{font-family:Fraunces,Georgia,serif;font-variation-settings:"SOFT" 100,"WONK" 1;font-size:21px;line-height:1.15;color:var(--ink)}
+.rule .k small{display:block;font-family:"Source Sans 3",sans-serif;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:4px;font-variation-settings:normal}
+.rule p{margin:0 0 6px;max-width:none}
+.fig{background:var(--panel);padding:18px 18px 12px;margin:20px 0;overflow-x:auto}
+.fig svg{display:block;min-width:720px;width:100%;height:auto}
+.fig .cap{font-size:14px;color:var(--ink-soft);margin:10px 0 0;max-width:none}
+.fig text{font-family:"Source Sans 3",sans-serif;fill:var(--ink)}
+.fig .lab{font-size:11px;letter-spacing:.06em;text-transform:uppercase;fill:var(--ink-soft)}
+.fig .dim{font-size:12px;fill:var(--ink);font-variant-numeric:tabular-nums}
+.two{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;align-items:start}
+ol.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0;max-width:72ch}
+ol.steps li{counter-increment:s;position:relative;padding:12px 0 12px 56px;border-bottom:1px solid var(--rule)}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:10px;width:38px;height:38px;border:1px solid var(--rule-strong);display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--rasp)}
+ol.steps li b{display:block;font-weight:600;margin-bottom:2px}
+ul.plain{padding-left:20px;max-width:72ch}
+ul.plain li{margin:0 0 8px}
+.timeline{border-top:1px solid var(--rule-strong)}
+.tl{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.tl .d{font-variant-numeric:tabular-nums;font-weight:600;color:var(--rasp)}
+.tl p{margin:0;max-width:none}
+.src{font-size:13.5px;color:var(--ink-soft);border-top:1px solid var(--rule-strong);padding-top:14px;margin-top:40px}
+.src p{max-width:none;margin:0 0 6px}
+@media (max-width:760px){
+  .verdict,.scenes,.two{grid-template-columns:1fr}
+  .verdict>div+div{border-left:0;border-top:1px solid var(--rule-strong)}
+  .rule{grid-template-columns:1fr;gap:6px}
+  .tl{grid-template-columns:1fr;gap:2px}
+  .swirl{display:none}
+}
+@media (prefers-reduced-motion: no-preference){
+  .swirl g{transform-origin:150px 150px;animation:turn 240s linear infinite}
+  @keyframes turn{to{transform:rotate(360deg)}}
+}
+</style>
+
+<div class="page">
+<header class="mast">
+  <svg class="swirl" viewBox="0 0 300 300" aria-hidden="true">
+    <g fill="none" stroke-width="7" stroke-linecap="round">
+      <path d="M150 150c0-40 40-60 70-40s30 70-10 90-90-10-90-60 50-100 100-90 80 70 60 120-100 70-140 30" stroke="var(--pink)" opacity=".55"/>
+      <path d="M150 150c-30 10-40 40-20 60s60 10 60-30-40-60-80-40-50 90 0 110" stroke="var(--gold)" opacity=".55"/>
+      <path d="M150 150c20-30 60-20 60 10s-40 50-70 30-20-70 20-80" stroke="var(--blue)" opacity=".6"/>
+    </g>
+  </svg>
+  <div class="eyebrow">Ozark Ballet Theater · The Nutcracker · Pat Walker Theater, Springdale · December 18–20, 2026</div>
+  <h1>The Moving Room</h1>
+  <p class="dek">Set direction for the portals, legs and drops, and the plan for cutting them from Gladsbuy printed cloth.</p>
+</header>
+
+<section>
+  <div class="secno">The call</div>
+  <h2>Print the big goods. Buy the painter’s judgment, not the painter’s square footage.</h2>
+  <p class="lede">You asked whether a scenic painter is realistic. With three drops, three portals and two leg sets per scene the printed goods come to about 9,100 square feet. Here is what that costs each way, using TheatreWorld’s published range for hand-painted drops and your own March 2026 Gladsbuy invoice.</p>
+  <div class="verdict">
+    <div>
+      <h3>Hand-painted by a studio</h3>
+      <div class="big">$63k – $272k<small>9,060 sq ft at $7–30 per sq ft</small></div>
+      <p class="note">Standard pricing wants 45–90 days of notice, and it is 15 weeks to opening. A local charge artist at the bottom of that range still needs a 60-ft paint deck and a month of floor time you do not have.</p>
+    </div>
+    <div>
+      <h3>Gladsbuy polyester oxford, printed</h3>
+      <div class="big">≈ $10,200<small>about $3,400 per scene, all 18 pieces, shipped</small></div>
+      <p class="note">Your March order priced the oxford at $0.91 per sq ft before options and shipping. It shipped six days after payment.</p>
+    </div>
+  </div>
+  <p>So the answer is print, and put a painter where a painter changes the result for a few hundred dollars instead of tens of thousands:</p>
+  <ul class="plain">
+    <li><strong>A half-day artwork review</strong> before anything goes to Gladsbuy. A scenic artist reading the files against the rules in the next section catches the horizon, value and scale mistakes that no printer will.</li>
+    <li><strong>One highlight day after the goods arrive.</strong> Print cannot do metal. A painter with a quart of metallic gold and a glaze brush, hitting the swag edges, tassels and cartouches, is the single cheapest thing that makes printed cloth read as painted scenery under stage light.</li>
+    <li><strong>The practical pieces.</strong> The tree, the furniture, a low ground row in front of each drop. Those are hand work anyway.</li>
+  </ul>
+  <p>Nearby sources for that person: the scene shops at TheatreSquared in Fayetteville and the University of Arkansas theatre department both employ charge artists who take day work. Ask for a scenic charge or lead painter, not a designer.</p>
+</section>
+
+<section>
+  <div class="secno">Direction</div>
+  <h2>Three places, one hand</h2>
+  <p class="lede">Clara goes on a journey, so the three scenes must read as three different places, not as one room re-dressed. The parlor image you generated has the right bones for the first of them: a pale architectural envelope, drapery swags with gilt cartouches, a ceiling that is more sky than plaster, a room that reads as a memory rather than a building. What carries into the forest and the kingdom is the painter’s hand, not the room.</p>
+  <p>The lineage you named is the brief, so it is worth stating what each contributes to the printed pieces. <strong>Benois</strong> for the composition of the parlor and its pale envelope. <strong>Beverley</strong> for haze and soft transitions, which is also what makes a printed drop sit behind a printed portal instead of fighting it. <strong>Craven</strong> for painting to the light: forms that are warm and inviting at full stage level and become stranger as the light falls away. <strong>Panini</strong> for impossible depth and scale in the room beyond. <strong>Boucher and Fragonard</strong> for the pink-gold-blue ceiling, the clouds and the putti. <strong>Bakst</strong> for jewel color used emotionally rather than correctly.</p>
+  <p>The psychedelia is not a fourth thing laid on top. It is Rococo’s own spirals, shells, clouds and floating figures pushed just far enough that a place seems about to move. The drops are printed this year, not projected, so the movement is not literal. It lives in the painting, in forms that lean and spiral, and in the light: a slow colour drift across a ceiling swirl or a sugar sky makes a still picture breathe, and each place breathes differently.</p>
+  <div class="scenes">
+    <div class="scene">
+      <h3>Party</h3>
+      <div class="mat">Place · the Stahlbaum parlor</div>
+      <div class="chips"><span class="chip" style="background:#E9A2BE"></span><span class="chip" style="background:#D9A441"></span><span class="chip" style="background:#7FA6C9"></span><span class="chip" style="background:#F9E9C8"></span><span class="chip" style="background:#3A1250"></span></div>
+      <p>The image as you made it, corrected per the rules below. An interior: enclosed, candle-warm, human at the doorway and Panini-deep beyond the arch. Rose silk swags on a gilt cornice, garlands. The canopy is a drapery valance with a cartouche; the legs are the room’s own curtains. The ceiling swirl is painted mid-turn, and a slow colour drift in the wash on it does the rest.</p>
+      <p>The Battle keeps the same room and the same drop; lighting takes it to night and the mice become literal. The tree zone at centre stays a quiet wall.</p>
+    </div>
+    <div class="scene snow">
+      <h3>Snow</h3>
+      <div class="mat">Place · a forest at night</div>
+      <div class="chips"><span class="chip" style="background:#DCE8F4"></span><span class="chip" style="background:#7FA6C9"></span><span class="chip" style="background:#B9B0D6"></span><span class="chip" style="background:#F2C6D6"></span><span class="chip" style="background:#3A1250"></span></div>
+      <p>An exterior, and nothing like the parlor: no walls, no gilt. Moonlit firs, a frozen clearing, haze in the sky the way Beverley painted it, the cold pushed toward the strange as the light falls away. Moon-blue, lilac and silver, with a rose frost so the show’s pink survives. The canopy is snow-laden boughs cut from the drop’s own tree line; the legs are trees.</p>
+      <p>Snow falls from the cradle in front of it; the painted sky holds still and the light drifts across it. The swan hides here.</p>
+    </div>
+    <div class="scene sweets">
+      <h3>Land of Sweets</h3>
+      <div class="mat">Place · the Sugar Plum Fairy’s kingdom</div>
+      <div class="chips"><span class="chip" style="background:#E8629C"></span><span class="chip" style="background:#B4256B"></span><span class="chip" style="background:#F0A02A"></span><span class="chip" style="background:#F9E9C8"></span><span class="chip" style="background:#9CD3B4"></span></div>
+      <p>A kingdom, not a room: a confectionery garden or palace terrace with architecture made of sugar, ribbon-candy columns, a crystal gate, scale exaggerated the way Panini did it but by candy logic. This is where the poster palette arrives at full strength: pink field, raspberry, marigold, cream, green only as garnish. The canopy is a pulled-sugar arch with a boiled-sweet roundel; the legs are twisted ribbon columns.</p>
+      <p>The spun-sugar sky is where the painting itself is most alive.</p>
+    </div>
+  </div>
+  <p>One rule carries over from the poster work: there is no black anywhere in the artwork. The deepest shadow is plum, and the black masking around it does the rest.</p>
+  <p>The parlor gets its own game: mice hidden in the decor. A mouse face in a cartouche scroll, a tail where a tassel cord should be, a pair peering out of a garland, one on the chair rail of the room. Keep them 6 in or larger so the balcony can find them, and let the Battle make literal what the ornament was hinting at all along. Snow and Sweets carry no mice; the joke belongs to the room where the Mouse King lives.</p>
+  <p>The company’s own running joke stays too: one subtle swan silhouette on one backdrop per show. The Snow forest is the natural home for it this year, a swan in the shape of a snowbank or in the moon’s reflection, unlabeled and cheeky, for the people who were at Swan Lake in April.</p>
+</section>
+
+<section>
+  <div class="secno">From the attempt to the stage</div>
+  <h2>What a scenic painter would change before this prints</h2>
+  <p class="lede">These are the working rules a paint shop applies to any drop, translated into edits for the parlor image and the two scenes that follow it. Apply them in the next generation pass, not in Photoshop afterwards, because most of them are about composition.</p>
+  <div class="rules">
+    <div class="rule"><div class="k">Values<small>Craven</small></div><div><p>No pure white and no black. The brightest thing on stage is a chandelier glow, capped around 90 percent; the deepest shadow is plum. Front light at show levels lifts and flattens printed cloth, so push contrast about ten percent past what looks right on a screen, then prove it: order a 5 × 3 ft section of the parlor canopy from Gladsbuy at final resolution and light it in the studio before the big order.</p></div></div>
+    <div class="rule"><div class="k">One horizon<small>Benois · Panini</small></div><div><p>Every piece shares a single eye level: 4 ft above the deck, which is roughly a seated eye in row five once the rake is counted. The parlor image’s floor already converges near chair-seat height, so keep it; draw the leg drapery and the canopy from that same station point so the portal and the room agree.</p></div></div>
+    <div class="rule"><div class="k">The floor<small>black marley, one colour all show</small></div><div><p>The performance floor is black marley for the whole show. Grey is the alternative, but it is one choice for all three scenes, not a per-scene one. Black keeps the black-box logic that already holds the masking: the printed pieces float like a lit painting, the dancers read against the deck, and the “no black in the art” rule stays true because the floor is the one black thing. A painted floor meeting a real floor is where painted rooms die, so crop so no more than 2 ft of painted parquet shows, and let the bottom 2 ft of every piece fall from plum toward the marley’s value behind a furniture line or ground row. If grey wins, that band ends in grey-plum instead, and the front-light bounce off the deck lifts the bottoms of everything, so the lower values of all three drops come down a step to meet it.</p></div></div>
+    <div class="rule"><div class="k">The tree<small>part of the parlor picture</small></div><div><p>The rising tree is part of the Party and Battle backdrop, not something in front of it. It stands at centre on LS24, 1.3 ft in front of the drop, with a 24-ft base: collapsed to 11 ft for the Party, grown to 28 ft in the Battle, its top vanishing above the 20-ft canopy on the way up. So the drop gets a tree zone, ±12 ft either side of centre from the deck to 20 ft, painted as a quiet wall field with no doorway, window or chandelier in it. The parlor’s focal architecture, the arch to the night window and the mirrors, sits either side of that zone or frames it deliberately. The tree’s practical lights are the brightest thing in the scene; the painted candles yield to them. Its three wires run up through the picture to the batten, so keep fine horizontal detail out of the zone above the tree where they would read. The model places the tree; the template marks the zone.</p></div></div>
+    <div class="rule"><div class="k">Human scale</div><div><p>Check one door at 7 ft and one chair seat at 18 in against a 5 ft 6 in figure. On a 25-ft drop the door is about 28 percent of the height. Panini’s exaggerated ceiling is welcome; the doorway the Nutcracker walks through is not.</p></div></div>
+    <div class="rule"><div class="k">Detail size</div><div><p>From 36 ft an eye resolves about an eighth of an inch. Anything under 3 in becomes texture, and anything under an inch becomes mush that also eats your resolution budget. Fewer, bigger swags and scrolls. This one rule solves half the print-resolution problem by itself.</p></div></div>
+    <div class="rule"><div class="k">Edges that will be cut</div><div><p>Every silhouette that becomes a cut edge gets a 1–2 in plum shadow line painted just inside it, and the area beyond it is printed plum, not white, so a cut that wanders reads as shadow. Simple shapes only: big swags, tassels at least 8 in wide, no thin dangling threads or fringe.</p></div></div>
+    <div class="rule"><div class="k">Gold<small>three values, then a brush</small></div><div><p>Print has no metal. Paint gold as ochre body, cream highlight and umber shadow, and reserve the real metallic for the painter’s highlight day after delivery.</p></div></div>
+    <div class="rule"><div class="k">Aerial perspective<small>Beverley</small></div><div><p>The nearest thing is darkest, warmest and sharpest; the room beyond is lighter, cooler and softer. Portals crisp, legs slightly softer, the drop hazy. Under stage light a printed drop reads flatter than the file, so the haze is drawn in, not left to the medium.</p></div></div>
+    <div class="rule"><div class="k">Light agreement</div><div><p>The painted light source and the real one must agree. Party: warm from above and slightly downstage, so painted shadows fall down and away from the house. Snow: cool moonlight from high left. Sweets: flat and rosy, almost shadowless.</p></div></div>
+    <div class="rule"><div class="k">Modules<small>how a paint shop lays it out</small></div><div><p>Draw each scene’s canopy as one centre motif, 14 ft wide, and four repeating 12-ft units: swags for the parlor, bough clusters for the forest, sugar-work for the kingdom. Draw one leg and mirror it. Generate each module at 2,000 px wide or more, upscale twice, and assemble in the templates below. That is the only route from 1,664-px generations to printable files.</p></div></div>
+    <div class="rule"><div class="k">The safe zone</div><div><p>From the sold seats the house sees about 38 × 20 ft of a 50 × 25 ft drop. The top 5 ft hide behind the canopy, and the outer 6 ft each side hide behind legs. Keep the story inside the window; the margins exist for overlap, and they should continue the ceiling and walls so nothing “ends” in view.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="secno">Pieces</div>
+  <h2>How the picture becomes cloth</h2>
+  <p class="lede">Each portal is not one cut-out. It is a 62 × 10 ft canopy border with a curved lower edge, hung on the downstage face of the pipe, with two 11 × 25 ft leg panels tied behind it on the same pipe. A second pair of 12 × 25 ft legs hangs about halfway between the portal and the drop, trimmed inward to a 38-ft opening, and the drop itself is a printed 50 × 25 ft piece. Only the canopy curve is ever cut.</p>
+  <div class="fig">
+    <svg viewBox="0 0 820 380" role="img" aria-label="Front elevation of one scene’s printed pieces: 62-foot canopy border with curved opening, portal legs, upstage legs and the printed drop behind">
+      <defs>
+        <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="var(--ink-faint)" stroke-width="1"/></pattern>
+      </defs>
+      <!-- printed drop 50 x 25 -->
+      <rect x="100" y="14" width="600" height="300" fill="var(--blue-soft)" opacity=".7"/>
+      <text x="400" y="220" text-anchor="middle" class="lab">printed drop · 50 × 25 ft · LS18 / LS20 / LS25</text>
+      <!-- upstage scene legs (12 ft panels, 38 opening) -->
+      <rect x="28" y="14" width="144" height="300" fill="url(#hatch)" stroke="var(--ink-faint)" stroke-width="1"/>
+      <rect x="628" y="14" width="144" height="300" fill="url(#hatch)" stroke="var(--ink-faint)" stroke-width="1"/>
+      <text x="100" y="250" text-anchor="middle" class="lab">upstage legs</text>
+      <text x="100" y="264" text-anchor="middle" class="lab">12 × 25 ft</text>
+      <text x="700" y="250" text-anchor="middle" class="lab">LS14 · LS17 · LS23</text>
+      <text x="700" y="264" text-anchor="middle" class="lab">38 ft opening</text>
+      <!-- portal legs (11 ft panels) -->
+      <rect x="28" y="14" width="132" height="300" fill="var(--pink-soft)" stroke="var(--rasp)" stroke-width="1.2"/>
+      <rect x="640" y="14" width="132" height="300" fill="var(--pink-soft)" stroke="var(--rasp)" stroke-width="1.2"/>
+      <text x="94" y="180" text-anchor="middle" class="lab">portal leg</text>
+      <text x="94" y="194" text-anchor="middle" class="lab">11 × 25 ft</text>
+      <text x="706" y="180" text-anchor="middle" class="lab">portal leg</text>
+      <text x="706" y="194" text-anchor="middle" class="lab">11 × 25 ft</text>
+      <!-- leg seams 1 ft from offstage edge -->
+      <line x1="40" y1="14" x2="40" y2="314" stroke="var(--ink)" stroke-width="1" stroke-dasharray="3 4"/>
+      <line x1="760" y1="14" x2="760" y2="314" stroke="var(--ink)" stroke-width="1" stroke-dasharray="3 4"/>
+      <!-- canopy border 62 x 10 with curved opening -->
+      <path d="M28,14 H772 V134 H640 V122 Q400,26 160,122 V134 H28 Z" fill="var(--gold-soft)" stroke="var(--gold)" stroke-width="1.5"/>
+      <path d="M160,122 Q400,26 640,122" fill="none" stroke="var(--cut)" stroke-width="2.5" stroke-dasharray="7 5"/>
+      <text x="400" y="52" text-anchor="middle" class="lab">canopy border · 62 × 10 ft · one piece · LS6 / LS13 / LS22</text>
+      <text x="400" y="100" text-anchor="middle" class="dim" fill="var(--cut)">cut line: 16 ft at the legs, 20 ft at centre</text>
+      <!-- module ticks -->
+      <g stroke="var(--ink)" stroke-width="1">
+        <line x1="172" y1="14" x2="172" y2="26"/><line x1="316" y1="14" x2="316" y2="26"/><line x1="484" y1="14" x2="484" y2="26"/><line x1="628" y1="14" x2="628" y2="26"/>
+      </g>
+      <text x="100" y="34" text-anchor="middle" class="lab">swag 12'</text>
+      <text x="244" y="34" text-anchor="middle" class="lab">swag 12'</text>
+      <text x="400" y="34" text-anchor="middle" class="lab">cartouche 14'</text>
+      <text x="556" y="34" text-anchor="middle" class="lab">swag 12'</text>
+      <text x="700" y="34" text-anchor="middle" class="lab">swag 12'</text>
+      <!-- safe zone -->
+      <rect x="172" y="74" width="456" height="240" fill="none" stroke="var(--ink)" stroke-width="1" stroke-dasharray="2 5"/>
+      <text x="400" y="300" text-anchor="middle" class="lab">what the sold seats see ≈ 38 × 20 ft · keep the story inside</text>
+      <!-- pipe -->
+      <line x1="20" y1="14" x2="780" y2="14" stroke="var(--ink)" stroke-width="3"/>
+      <!-- deck -->
+      <line x1="20" y1="314" x2="780" y2="314" stroke="var(--ink)" stroke-width="2"/>
+      <text x="784" y="318" class="lab">deck</text>
+      <!-- dimensions -->
+      <g stroke="var(--ink)" stroke-width="1">
+        <line x1="28" y1="334" x2="772" y2="334"/><line x1="28" y1="328" x2="28" y2="340"/><line x1="772" y1="328" x2="772" y2="340"/>
+        <line x1="160" y1="350" x2="640" y2="350"/><line x1="160" y1="344" x2="160" y2="356"/><line x1="640" y1="344" x2="640" y2="356"/>
+        <line x1="172" y1="366" x2="628" y2="366"/><line x1="172" y1="360" x2="172" y2="372"/><line x1="628" y1="360" x2="628" y2="372"/>
+        <line x1="790" y1="14" x2="790" y2="314"/><line x1="784" y1="14" x2="796" y2="14"/><line x1="784" y1="314" x2="796" y2="314"/>
+        <line x1="12" y1="14" x2="12" y2="134"/><line x1="6" y1="14" x2="18" y2="14"/><line x1="6" y1="134" x2="18" y2="134"/>
+      </g>
+      <text x="400" y="330" text-anchor="middle" class="dim">62 ft · pipe length 68 ft</text>
+      <text x="400" y="346" text-anchor="middle" class="dim">portal opening 40 ft</text>
+      <text x="400" y="362" text-anchor="middle" class="dim">upstage legs opening 38 ft</text>
+      <text x="794" y="168" class="dim" transform="rotate(90 794 168)" text-anchor="middle">25 ft</text>
+      <text x="8" y="74" class="dim" transform="rotate(-90 8 74)" text-anchor="middle">10 ft</text>
+    </svg>
+    <p class="cap">Front elevation of one scene, house view. Pink: the portal pieces on one pipe. Hatched: the upstage legs, on a pipe roughly halfway to the drop. Blue: the printed drop. Dashed verticals in the legs are the one seam Gladsbuy’s 10-ft roll forces, placed a foot from the offstage edge where the black legs hide it. Dotted rectangle: the window the audience actually sees.</p>
+  </div>
+
+  <div class="two">
+    <div class="tbl">
+      <table>
+        <tr><th>Piece</th><th>Where</th><th class="num">Size</th><th>Notes</th></tr>
+        <tr><td>Canopy border, curved</td><td>LS6 Snow · LS13 Sweets · LS22 Parlor</td><td class="num">62 × 10 ft</td><td>Cut edge 16 ft at the legs rising to 20 ft at centre; bottom hangs at 15 ft over the legs. One seamless piece if Gladsbuy confirms a 62-ft run; otherwise two 31 × 10 joined behind the cartouche.</td></tr>
+        <tr><td>Portal legs, pair</td><td>same pipe, behind the border</td><td class="num">11 × 25 ft</td><td>40-ft opening. Seam 1 ft from the offstage edge. Grommets top, pocket bottom.</td></tr>
+        <tr><td>Upstage legs, pair</td><td>LS14 Snow · LS17 Sweets · LS23 Parlor</td><td class="num">12 × 25 ft</td><td>38-ft opening, matches the 45→38 black-leg taper. Same finishing as the portal legs.</td></tr>
+        <tr><td>Drop</td><td>LS18 Snow · LS20 Sweets · LS25 Parlor</td><td class="num">50 × 25 ft</td><td>Printed, on the deck at trim 25. Two Gladsbuy seams run across it, since the oxford is 10 ft in one direction; ask where they fall and put a horizontal line of the architecture on each.</td></tr>
+      </table>
+    </div>
+    <div class="fig" style="margin-top:14px">
+      <svg viewBox="0 0 340 236" role="img" aria-label="Side view of one pipe: canopy border tied on the downstage face, leg panel behind, chain along the cut edge, pipe in the leg’s bottom pocket">
+        <line x1="20" y1="212" x2="320" y2="212" stroke="var(--ink)" stroke-width="2"/>
+        <text x="300" y="228" class="lab">deck</text>
+        <circle cx="170" cy="26" r="7" fill="var(--panel-2)" stroke="var(--ink)" stroke-width="2"/>
+        <text x="184" y="20" class="lab">batten</text>
+        <path d="M163 20 q7-10 14 0" fill="none" stroke="var(--ink)" stroke-width="1"/>
+        <line x1="177" y1="32" x2="181" y2="104" stroke="var(--gold)" stroke-width="3"/>
+        <circle cx="181" cy="107" r="3.5" fill="var(--rasp)"/>
+        <text x="190" y="70" class="lab">border, downstage face</text>
+        <text x="190" y="84" class="lab">tie line every 12 in</text>
+        <text x="190" y="112" class="lab">chain in a fused sleeve</text>
+        <text x="190" y="126" class="lab">along the whole curve</text>
+        <line x1="163" y1="32" x2="159" y2="204" stroke="var(--rasp)" stroke-width="3"/>
+        <circle cx="158" cy="205" r="4.5" fill="var(--panel-2)" stroke="var(--ink)" stroke-width="1.5"/>
+        <text x="150" y="150" text-anchor="end" class="lab">leg panel, tied behind</text>
+        <text x="150" y="164" text-anchor="end" class="lab">the border on the same pipe</text>
+        <text x="150" y="196" text-anchor="end" class="lab">bottom pocket: ¾-in EMT</text>
+        <text x="150" y="210" text-anchor="end" class="lab">or #8 jack chain</text>
+        <text x="40" y="40" class="lab">upstage</text>
+        <text x="260" y="40" class="lab">house →</text>
+      </svg>
+      <p class="cap">Section through one portal pipe.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="secno">The order</div>
+  <h2>What to tell Gladsbuy</h2>
+  <p class="lede">Everything below comes from their site and from your own threads with their support desk, so it matches how they actually work. The one thing to confirm by email before ordering is whether the oxford roll will run 62 ft in one piece; their product copy says “length more than 40 ft”.</p>
+  <h3>Material</h3>
+  <p><strong>Digital Printed Backdrop, 100% polyester oxford, 160 g/m²</strong>, for every piece. Their other material, the computer-printed synthetic, comes in 5-ft pieces joined with double-sided tape, is not washable and dies in UV; it is fine for a one-off drop and wrong for anything that gets cut, chained and flown. The oxford is sewn at its seams, irons flat, folds for storage and, in their words, can be made fireproof. You noted in March that it runs about three times the price of the thin one; the table already uses the oxford rate.</p>
+  <h3>Pieces and prices</h3>
+  <p class="note" style="margin-bottom:8px">Estimated from the March 10, 2026 invoice: $760.99 for a 40 × 20 with grommets and pocket, so $0.91 per sq ft of cloth. Shipping scaled from that order’s $338 for 1,600 sq ft. Gladsbuy quotes on the site, so treat these as a budget, not a price.</p>
+  <div class="tbl">
+    <table>
+      <tr><th>Item</th><th class="num">Qty</th><th class="num">Size</th><th class="num">Sq ft</th><th>Options</th><th class="num">Each</th><th class="num">Line</th></tr>
+      <tr><td>Canopy border</td><td class="num">3</td><td class="num">62 × 10</td><td class="num">620</td><td>grommets top; no pocket (we add the chain sleeve)</td><td class="num">$577</td><td class="num">$1,730</td></tr>
+      <tr><td>Portal leg panel</td><td class="num">6</td><td class="num">11 × 25</td><td class="num">275</td><td>grommets top, pocket bottom</td><td class="num">$281</td><td class="num">$1,688</td></tr>
+      <tr><td>Upstage leg panel</td><td class="num">6</td><td class="num">12 × 25</td><td class="num">300</td><td>grommets top, pocket bottom</td><td class="num">$304</td><td class="num">$1,825</td></tr>
+      <tr><td>Drop</td><td class="num">3</td><td class="num">50 × 25</td><td class="num">1,250</td><td>grommets top, pocket bottom; two seams</td><td class="num">$1,172</td><td class="num">$3,516</td></tr>
+      <tr><td>Fireproof treatment</td><td class="num">18</td><td></td><td></td><td>ask for the price and a written statement of what it meets</td><td class="num">?</td><td class="num">?</td></tr>
+      <tr><td>Shipping, express</td><td></td><td></td><td class="num">9,060</td><td>scaled from March</td><td></td><td class="num">≈ $1,920</td></tr>
+      <tr><td>5 % coupon</td><td></td><td></td><td></td><td>they issued NCDB5 last time on request</td><td></td><td class="num">≈ −$440</td></tr>
+      <tr><td><strong>Total, all three scenes</strong></td><td></td><td></td><td></td><td></td><td></td><td class="num"><strong>≈ $10,200</strong></td></tr>
+      <tr><td>One scene alone, if you phase it</td><td></td><td></td><td></td><td>drop + border + 4 legs + share of shipping</td><td></td><td class="num">≈ $3,400</td></tr>
+    </table>
+  </div>
+  <h3>Files</h3>
+  <p>Their stated spec is 500 pixels per foot: 20,000 × 10,000 for a 40 × 20. From row five the eye stops resolving at roughly 190 pixels per foot, so that is the floor for the portals and legs, which sit closest to the house. The 1,664-px parlor generation spread across 62 ft is 27 pixels per foot, which is why the modules matter. JPEG or PNG, sRGB, and a Google Drive link in the order form the way you did in March.</p>
+  <div class="tbl">
+    <table>
+      <tr><th>Piece</th><th class="num">At their 500 px/ft</th><th class="num">Floor, 200 px/ft</th></tr>
+      <tr><td>Canopy border 62 × 10</td><td class="num">31,000 × 5,000</td><td class="num">12,400 × 2,000</td></tr>
+      <tr><td>Portal leg 11 × 25</td><td class="num">5,500 × 12,500</td><td class="num">2,200 × 5,000</td></tr>
+      <tr><td>Upstage leg 12 × 25</td><td class="num">6,000 × 12,500</td><td class="num">2,400 × 5,000</td></tr>
+      <tr><td>Drop 50 × 25</td><td class="num">25,000 × 12,500</td><td class="num">10,000 × 5,000</td></tr>
+    </table>
+  </div>
+  <p>Their desk told you in March that enlarging a blurry original does not improve it, and they are right. Upscaling works on modules that were sharp at 2,000 px, not on a whole room at 1,664. Each file gets a printed 1-in plum cut guide where a curve will be cut, and the canopy’s discarded opening area is printed plum too.</p>
+  <div class="callout">
+    <p><strong>Their confirmation loop.</strong> Within a day of payment support sends a full-size thumbnail and “1 metre viewing” detail crops of every file and waits for a yes. Say in the order notes how many distinct images there are; in March they assumed two identical drops from one file and the order paused a day. Eighteen pieces means eighteen files with the piece name and size in the filename, the way their own thumbnails are named.</p>
+  </div>
+  <h3>Fire</h3>
+  <p>Ask Gladsbuy for the fireproof option on all eighteen and for a written statement of the standard it meets. Pat Walker may ask for an NFPA 701 certificate; if Gladsbuy’s paper does not satisfy the house, treat after cutting with Rosco Flamex SF, the one made for polyester. One gallon covers about 500 sq ft, so the full set is about eighteen gallons, and it has to be re-applied after any washing. Spray the offcut first to check for a color shift.</p>
+</section>
+
+<section>
+  <div class="secno">Cutting and finishing</div>
+  <h2>Cutting the canopy from the printed cloth</h2>
+  <p class="lede">The material decides the method. Polyester oxford seals when it is cut hot, so the curve is a hot-knife job, not a scissors-and-hem job. Two people, a clean gym floor and an afternoon per scene.</p>
+  <ol class="steps">
+    <li><b>Print the cut guide into the art.</b> A 1-in plum band just outside the finished edge, and plum fill across the whole opening. Cutting inside the band is invisible; cutting outside it leaves a shadow line, which is what a painter would have added anyway.</li>
+    <li><b>Lay the border out face up</b> on a clean floor, weighted with sandbags along the top edge. Snap a chalk line along the printed guide so the curve is one continuous line rather than a series of eyeballed cuts.</li>
+    <li><b>Cut with an electric hot knife</b> over a strip of MDF or a sheet of glass slid under the cloth. The polyester edge fuses as it cuts and will not fray. Practice on the opening offcut first; the same tool trims the tassel silhouettes. If you must use shears, run a bead of Fray Check along the raw edge.</li>
+    <li><b>Give the curve a spine.</b> Fuse a 2-in strip of the offcut to the back of the curved edge with iron-on fusible web, leaving a channel, and feed #6 jack chain or bead chain through it. The border’s free edge then hangs true, holds the arch shape, and stops breathing when the fly system moves or the HVAC starts.</li>
+    <li><b>Legs: keep the inner edge simple.</b> The printed straight edge or a shallow hot-knife drapery profile, with excursions under 12 in. Deep irregular shapes curl and twist on cloth this light, which is the problem you ran into planning the March legs. Slide ¾-in EMT or #8 jack chain into the bottom pocket Gladsbuy sews.</li>
+    <li><b>Header.</b> Tie line every 12 in through the ordered grommets, border tied on the downstage face, legs tied behind. If the theater’s technical director wants a reinforced header, fuse 2-in polyester webbing to the back of the top edge before you grommet, or ask Gladsbuy whether they will sew one.</li>
+    <li><b>Light bleed.</b> 160 g/m² oxford glows when a fixture upstage hits its back. Keep upstage units shuttered off the goods, and if a leg still glows, tie a black leg from house stock behind it on the same pipe.</li>
+    <li><b>Treat, label, fold.</b> Flame retardant if not done at the factory, a tag on every piece with its pipe number and scene, and fold for storage. The oxford irons flat on the polyester setting if it creases.</li>
+  </ol>
+</section>
+
+<section>
+  <div class="secno">Calendar</div>
+  <h2>Fifteen weeks to December 18</h2>
+  <div class="timeline">
+    <div class="tl"><div class="d">by Sep 20</div><p>Direction locked. Parlor artwork v2 with the rules applied, drawn as modules. Snow and Sweets sketched from the same silhouette.</p></div>
+    <div class="tl"><div class="d">by Oct 9</div><p>Order the 5 × 3 ft parlor swatch from Gladsbuy at final resolution, oxford, with the fireproof option. It is also the fire-marshal sample.</p></div>
+    <div class="tl"><div class="d">Oct 23–30</div><p>Swatch in hand. Light it. Adjust values across all three scenes. Painter’s half-day review of every file.</p></div>
+    <div class="tl"><div class="d">Nov 2</div><p>Place the full order with eighteen named files and the coupon. Answer the thumbnail email the same day.</p></div>
+    <div class="tl"><div class="d">Nov 20–25</div><p>Goods arrive. March took six days to ship and the express courier did the rest; allow three weeks door to door to be safe.</p></div>
+    <div class="tl"><div class="d">Nov 28–Dec 10</div><p>Cut, chain, pocket, tie lines, flame retardant, labels. Three afternoons with two people.</p></div>
+    <div class="tl"><div class="d">Dec 12</div><p>Painter’s highlight day: metallic gold on the cartouches and swag edges, glazes where the print went flat.</p></div>
+    <div class="tl"><div class="d">Dec 14–17</div><p>Load-in at Pat Walker. Hang per the plot: portals LS6 / LS13 / LS22, upstage legs LS14 / LS17 / LS23, blacks at 47 / 45 / 45 / 42 on LS5 / LS8 / LS9 / LS15. No black leg moves during the show.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="secno">Only you can supply</div>
+  <h2>Four things to send back</h2>
+  <ul class="plain">
+    <li><strong>The full-resolution parlor file</strong> dropped into Downloads. The version in chat is not on disk, and with the file I can cut it into the 3D model as the Party set so the portal, legs and tree read together from row five.</li>
+    <li><strong>Pat Walker’s fire paperwork rule.</strong> Whether the house accepts a supplier statement or needs NFPA 701 paper decides the Flamex line in the budget.</li>
+    <li><strong>Whether to order all three scenes at once</strong> or phase Party first. One order saves a shipping charge; phasing lets the parlor swatch teach the other two scenes.</li>
+    <li><strong>The measurements still outstanding from the model:</strong> distance from plaster to the first sold row, eye height there, the widest sold seat, and the real tormentor width.</li>
+  </ul>
+</section>
+
+<div class="src">
+  <p>Sources: Gladsbuy custom backdrop page and product copy (materials, 10-ft seamless limit, fireproof option, grommet and pocket options, 6–10 working-day delivery); Gladsbuy support emails to David, March 5–12 2026 (500 px/ft file guidance, material descriptions, confirmation process) and the March 10 2026 invoice (pricing); TheatreWorld Backdrops custom pricing page ($7–30 per sq ft, 45–90 day notice tiers); Rosco Flamex SF product listings (synthetic fabrics, 500 sq ft per gallon, NFPA 701 testing); OBT box office email, August 25 2026 (December 18–20, Pat Walker Theater).</p>
+</div>
+</div>
