@@ -1,7 +1,7 @@
 {
  "meta": {
-  "savedAt": "2026-09-05T20:00:00Z",
-  "note": "roller tree: 16 ft column x 40 ft print, 48 ft bough band, net 10 ft; Party 23, Battle 50"
+  "savedAt": "2026-09-06T00:30:00Z",
+  "note": "roller tree + fan boughs: 16x40 column print, 18 ft fans to pulleys at 32 ft; Party 23, Battle 50"
  },
  "state": {
   "version": 2,
@@ -1184,19 +1184,23 @@
    },
    {
     "id": "tree",
-    "name": "TREE \u2014 printed roller drop",
+    "name": "TREE \u2014 printed roller drop + fan boughs",
     "type": "tree",
-    "w": 48,
+    "w": 16,
     "h": 40,
     "d": 0.5,
     "autoMask": false,
     "source": null,
     "data": null,
     "wire": 10,
-    "credit": "Printed cut drop on scenic netting (Gladsbuy oxford). A 16 ft column \u00d7 40 ft print winds on a 2 in aluminum roller on the deck (three 16 ft sections, pinned); a 48 \u00d7 12 ft bough band unrolls in the last 12 ft of pipe travel. 10 ft of bare net from the print top to the pipe keeps the pipe above the 21 ft masking line in Party (trim 23 \u2192 tree top 13 ft). Full growth at trim 50 (top 40 ft, wings out). Lights: 12 V fairy strings at the crown, COB behind diffusion holes lower, zoned to a DMX decoder through a slip ring in the tube end. Never flies out: hides behind the snow and Sweets drops.",
-    "colW": 16,
-    "wingH": 12,
-    "rowH": 3
+    "credit": "Printed cut drop on scenic netting (Gladsbuy oxford). A 16 \u00d7 40 ft column print winds on a one-piece 2 in aluminum roller on the deck. Two fan boughs (18 ft, root seam 4\u201312 ft up the column edges) are folded behind the column for rolling; as each root rises off the roll, a cord in its top edge is pulled toward a sandbag-tensioned pulley 32 ft off centre at 10 ft and the fan opens (smooth), or is held by a kabuki release and fired from the board (sudden). 10 ft of bare net from the print top to the pipe keeps the pipe above the 21 ft masking line in Party (trim 23 \u2192 top 13 ft). Full growth at trim 50 (top 40 ft, fans open behind the parlor legs). Lights: 12 V fairy strings and COB behind diffusion holes, zoned to a DMX decoder through a slip ring in the tube end. Never flies out: hides behind the snow and Sweets drops.",
+    "rowH": 3,
+    "boughL": 18,
+    "boughRoot": 8,
+    "rootTop": 12,
+    "fanDeg": 40,
+    "anchorX": 32,
+    "anchorY": 10
    },
    {
     "id": "party-room",
@@ -1461,7 +1465,7 @@
     "n": 24,
     "d": 384,
     "assetId": "tree",
-    "label": "TREE \u2014 printed roller drop"
+    "label": "TREE \u2014 printed roller drop + fan boughs"
    },
    {
     "n": 25,
