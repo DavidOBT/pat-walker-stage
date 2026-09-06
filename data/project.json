@@ -1,7 +1,7 @@
 {
  "meta": {
-  "savedAt": "2026-09-04T18:00:00Z",
-  "note": "initial shared version: scene legs halfway, blacks 47/45/45/42, printed drops"
+  "savedAt": "2026-09-05T20:00:00Z",
+  "note": "roller tree: 16 ft column x 40 ft print, 48 ft bough band, net 10 ft; Party 23, Battle 50"
  },
  "state": {
   "version": 2,
@@ -171,7 +171,7 @@
        "rot": 0
       },
       "24": {
-       "fly": 20.0,
+       "fly": 23.0,
        "visible": true,
        "x": 0,
        "rot": 0
@@ -331,7 +331,7 @@
        "rot": 0
       },
       "24": {
-       "fly": 40.0,
+       "fly": 50.0,
        "visible": true,
        "x": 0,
        "rot": 0
@@ -491,7 +491,7 @@
        "rot": 0
       },
       "24": {
-       "fly": 40,
+       "fly": 50.0,
        "visible": true,
        "x": 0,
        "rot": 0
@@ -651,7 +651,7 @@
        "rot": 0
       },
       "24": {
-       "fly": 40.0,
+       "fly": 50.0,
        "visible": true,
        "x": 0,
        "rot": 0
@@ -811,7 +811,7 @@
        "rot": 0
       },
       "24": {
-       "fly": 40.0,
+       "fly": 50.0,
        "visible": true,
        "x": 0,
        "rot": 0
@@ -971,7 +971,7 @@
        "rot": 0
       },
       "24": {
-       "fly": 20.0,
+       "fly": 23.0,
        "visible": false,
        "x": 0,
        "rot": 0
@@ -1184,16 +1184,19 @@
    },
    {
     "id": "tree",
-    "name": "TREE",
+    "name": "TREE \u2014 printed roller drop",
     "type": "tree",
-    "w": 24,
-    "h": 28,
-    "d": 10,
+    "w": 48,
+    "h": 40,
+    "d": 0.5,
     "autoMask": false,
     "source": null,
     "data": null,
-    "wire": 9.0,
-    "credit": "Telescoping hoop tree, 28 ft fully open, 24 ft base diameter. Its pipe is a normal batten; three fixed wires run from the pipe straight to the top hoop. Wire length derived: tree pipe starts level with the backdrop pipe (20 ft) with the collapsed tree top at 11 ft \u2192 9 ft."
+    "wire": 10,
+    "credit": "Printed cut drop on scenic netting (Gladsbuy oxford). A 16 ft column \u00d7 40 ft print winds on a 2 in aluminum roller on the deck (three 16 ft sections, pinned); a 48 \u00d7 12 ft bough band unrolls in the last 12 ft of pipe travel. 10 ft of bare net from the print top to the pipe keeps the pipe above the 21 ft masking line in Party (trim 23 \u2192 tree top 13 ft). Full growth at trim 50 (top 40 ft, wings out). Lights: 12 V fairy strings at the crown, COB behind diffusion holes lower, zoned to a DMX decoder through a slip ring in the tube end. Never flies out: hides behind the snow and Sweets drops.",
+    "colW": 16,
+    "wingH": 12,
+    "rowH": 3
    },
    {
     "id": "party-room",
@@ -1458,7 +1461,7 @@
     "n": 24,
     "d": 384,
     "assetId": "tree",
-    "label": "TREE"
+    "label": "TREE \u2014 printed roller drop"
    },
    {
     "n": 25,
